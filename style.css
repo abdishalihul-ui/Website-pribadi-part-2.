@@ -1,0 +1,225 @@
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+:root {
+    --orange: #ff6b21;
+    --dark: #090909;
+    --gray: #999;
+}
+
+/* NAVIGASI */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #292929;
+}
+
+.navbar h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.navbar h2 span {
+    color: var(--orange);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+/* PEMBUKA */
+.hero {
+    padding: 100px 8% 70px;
+}
+
+.label {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 115px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    color: #bbb;
+    font-size: 19px;
+    max-width: 550px;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: brightness(0.8);
+}
+
+.caption {
+    color: var(--gray);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* ARTIKEL */
+.article,
+.technology,
+.timeline {
+    padding: 90px 12%;
+    border-top: 1px solid #292929;
+}
+
+.article h2,
+.technology h2,
+.timeline h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 30px;
+    max-width: 750px;
+}
+
+.article p:not(.label) {
+    color: #aaa;
+    max-width: 700px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.article img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 25px;
+    border-radius: 4px;
+}
+
+/* TEKNOLOGI */
+.technology {
+    background: #111;
+}
+
+.tech-card {
+    padding: 28px 0;
+    border-bottom: 1px solid #333;
+}
+
+.tech-card h3 {
+    color: var(--orange);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.tech-card p {
+    color: #aaa;
+    max-width: 650px;
+    font-size: 14px;
+}
+
+/* TIMELINE */
+.timeline-item {
+    border-left: 2px solid var(--orange);
+    padding: 5px 0 25px 25px;
+    margin-top: 30px;
+}
+
+.timeline-item h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* BAGIAN AKHIR */
+footer {
+    background: #111;
+    padding: 55px 8%;
+    border-top: 1px solid #333;
+}
+
+footer h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #999;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px 5%;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 65px 6% 45px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero img {
+        height: 250px;
+    }
+
+    .article,
+    .technology,
+    .timeline {
+        padding: 60px 7%;
+    }
+
+    .article img {
+        height: 230px;
+    }
+}
